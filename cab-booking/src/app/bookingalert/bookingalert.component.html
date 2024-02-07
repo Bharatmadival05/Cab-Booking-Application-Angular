@@ -1,0 +1,16 @@
+<div class="overlay">
+    <div id="card">
+      <h2>Your Booking Details</h2>
+      <p>Your tripBooking id is {{ data.tripBookingId }}</p>
+      <p>Driver: {{ data.driver?.username }}</p>
+      <p>Driver Contact: {{ data.driver?.mobile }}</p>
+      <p>From Date: {{ data.fromdate_time }}</p>
+      <p>From Location: {{ data.from_location }}</p>
+      <p>To Location: {{ data.todate_time }}</p>
+      <p>To Date: {{ data.to_location }}</p>
+      <p>Total K.M: {{ data.km }}</p>
+      <p>Total Amount: {{ data.totalamount }}</p>
+      <button mat-button (click)="onNoClick()">OK</button>
+    </div>
+  </div>
+  

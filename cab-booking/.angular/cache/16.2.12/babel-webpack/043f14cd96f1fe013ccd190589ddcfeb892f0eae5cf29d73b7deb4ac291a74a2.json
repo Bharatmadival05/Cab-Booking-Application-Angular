@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Trip {}\nexport class Driver {}\nexport class Cab {}\nexport class TripResponse {}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

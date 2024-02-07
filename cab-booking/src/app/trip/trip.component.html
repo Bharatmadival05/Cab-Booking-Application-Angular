@@ -1,0 +1,39 @@
+<div id="body">
+  <div class="container">
+    <h1 class="form-title">Book Cab</h1>
+    <form action="#" (ngSubmit)="addTrip()" #signupForm="ngForm">
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <label for="from_location">From Location</label>
+          <input type="text" id="from_location" name="from_location" placeholder="Enter From Location"
+            [(ngModel)]="tripObj.from_location" />
+        </div>
+        <div class="user-input-box">
+          <label for="fromdate_time">From Date</label>
+          <input type="date" id="fromdate_time" name="fromdate_time" placeholder="Enter From Date "
+            [(ngModel)]="tripObj.fromdate_time" />
+        </div>
+        <div class="user-input-box">
+          <label for="to_location">To Location</label>
+          <input type="text" id="to_location" name="to_location" placeholder="Enter To Location"
+            [(ngModel)]="tripObj.to_location" />
+        </div>
+        <div class="user-input-box">
+          <label for="todate_time">To Date</label>
+          <input type="date" id="todate_time" name="todate_time" placeholder="Enter To Date "
+            [(ngModel)]="tripObj.todate_time" />
+        </div>
+        <div class="user-input-box">
+          <label for="km">K.M</label>
+          <input type="number" id="km" name="km" placeholder="Enter K.M" [(ngModel)]="tripObj.km" />
+        </div>
+      </div>
+      <div class="form-submit-btn">
+        <input type="submit" value="Book Now" [disabled]="signupForm.invalid">
+      </div>
+    </form>
+    <div class="back">
+      <p><a (click)="backHome()">Return Home</a></p>
+    </div>
+  </div>
+</div>

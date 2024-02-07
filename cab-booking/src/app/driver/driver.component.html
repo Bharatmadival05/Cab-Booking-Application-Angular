@@ -1,0 +1,62 @@
+<body>
+  <div class="container">
+    <h1 class="form-title">Driver Registration</h1>
+    <form (ngSubmit)="addDriver()" #signupForm="ngForm">
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <label for="username">Full Name</label>
+          <input type="text" id="username" name="username" [(ngModel)]="driverObj.username"
+            placeholder="Enter Full Name" />
+        </div>
+        <div class="user-input-box">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="driverObj.email" placeholder="Enter Email" />
+        </div>
+        <div class="user-input-box">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="driverObj.password"
+            placeholder="Enter Password" />
+        </div>
+        <div class="user-input-box">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="number" id="phoneNumber" name="phoneNumber" [(ngModel)]="driverObj.mobile"
+            placeholder="Enter Phone Number" />
+        </div>
+        <div class="user-input-box">
+          <label for="licenceNo">Licence No</label>
+          <input type="number" id="licenceNo" name="licenceNo" [(ngModel)]="driverObj.licenceNo"
+            placeholder="Enter licenceno" />
+        </div>
+        <div class="user-input-box">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" [(ngModel)]="driverObj.address.city" placeholder="Enter City" />
+        </div>
+        <div class="user-input-box">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" [(ngModel)]="driverObj.address.state" placeholder="Enter State" />
+        </div>
+        <div class="user-input-box">
+          <label for="pincode">Pincode</label>
+          <input type="number" id="pincode" name="pincode" [(ngModel)]="driverObj.address.pincode"
+            placeholder="Enter Pincode" />
+        </div>
+        <div class="user-input-box">
+          <label for="cartype">Car Type</label>
+          <input type="text" id="cartype" name="cartype" [(ngModel)]="driverObj.cab.carType"
+            placeholder="Enter Car Type" />
+        </div>
+        <div class="user-input-box">
+          <label for="rateperkm">Charge / K.M</label>
+          <input type="number" id="rateperkm" name="rateperkm" [(ngModel)]="driverObj.cab.ratePerKm"
+            placeholder="Enter K.M" />
+        </div>
+      </div>
+      <div class="form-submit-btn">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+    <div class="links">
+      <p class="driver"><a (click)="userLogin()">Sign In</a></p>
+    </div>
+  </div>
+</body>

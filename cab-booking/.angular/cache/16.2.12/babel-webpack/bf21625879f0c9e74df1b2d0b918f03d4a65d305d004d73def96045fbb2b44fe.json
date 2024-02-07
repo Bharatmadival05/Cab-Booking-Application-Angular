@@ -1,0 +1,1 @@
+{"ast":null,"code":"this.route.params.subscribe(params => {\n  this.userid = params['userid'];\n  console.log('Received userid:', this.userid);\n});","map":null,"metadata":{},"sourceType":"script","externalDependencies":[]}

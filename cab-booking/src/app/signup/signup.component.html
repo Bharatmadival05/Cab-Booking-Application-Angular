@@ -1,0 +1,72 @@
+<body>
+  <div class="container">
+    <h1 class="form-title">Registration</h1>
+    <form (ngSubmit)="signUp()" #signupForm="ngForm">
+      <div class="main-user-info">
+        <div class="user-input-box">
+          <label for="username">Username</label>
+          <input type="text"
+                  id="username"
+                  name="username"
+                  [(ngModel)]="customerObj.username"
+                  placeholder="Enter Username"/>
+        </div>
+        <div class="user-input-box">
+          <label for="email">Email</label>
+          <input type="email"
+                  id="email"
+                  name="email"
+                  [(ngModel)]="customerObj.email"
+                  placeholder="Enter Email"/>
+        </div>
+        <div class="user-input-box">
+          <label for="mobile">Phone Number</label>
+          <input type="text"
+                  id="mobile"
+                  name="mobile"
+                  [(ngModel)]="customerObj.mobile"
+                  placeholder="Enter Phone Number"/>
+        </div>
+        <div class="user-input-box">
+          <label for="password">Password</label>
+          <input type="password"
+                  id="password"
+                  name="password"
+                  [(ngModel)]="customerObj.password"
+                  placeholder="Enter Password"/>
+        </div>
+        <div class="user-input-box">
+          <label for="city">City</label>
+          <input type="text"
+                  id="city"
+                  name="city"
+                  [(ngModel)]="customerObj.address.city"
+                  placeholder="City"/>
+        </div>
+        <div class="user-input-box">
+          <label for="city">Pincode</label>
+          <input type="text"
+                  id="pincode"
+                  name="pincode"
+                  [(ngModel)]="customerObj.address.pincode"
+                  placeholder="Pincode"/>
+        </div>
+        <div class="user-input-box">
+          <label for="state">State</label>
+          <input type="text"
+                  id="state"
+                  name="state"
+                  [(ngModel)]="customerObj.address.state"
+                  placeholder="State"/>
+        </div>
+      </div>
+      <div class="form-submit-btn">
+        <input type="submit" value="Register" [disabled]="signupForm.invalid">
+      </div>
+    </form>
+    <div class="links">
+      <p class="driver"><a routerLink="login">sign in</a></p>
+      <p class="driver"><a routerLink="driver">Driver sign Up</a></p>
+    </div>
+  </div>
+</body>
